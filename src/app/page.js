@@ -82,7 +82,7 @@ export default function Home() {
 
         >
 
-          Toggle Buzzer
+          {control.buzzer ? "Buzzer On":"Buzzer off"}
 
         </button>
 

@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Smart Door Dashboard
+
+A protected dashboard for monitoring the Firebase-backed smart door and operating its door lock and buzzer. Email/password accounts and server sessions use the official MongoDB Node.js driver.
+
+## Configuration
+
+Copy `.env.example` to `.env` and fill in its values. Keep `.env` private.
+
+- `MONGODB_URI` is the MongoDB Atlas or self-hosted connection string.
+- `MONGODB_DB` is optional and defaults to `smart_door_dashboard`.
+- The `NEXT_PUBLIC_FIREBASE_*` values connect the live sensor and control UI to Firebase Realtime Database.
+
+The first sign-up creates the MongoDB `users` and `sessions` collections. User emails are unique; session documents automatically expire after seven days.
 
 ## Getting Started
 
@@ -16,9 +28,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Navigate to `http://localhost:3000`. You will be redirected to sign up or log in, then sent to the dashboard.
 
 ## Learn More
 

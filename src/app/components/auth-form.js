@@ -23,7 +23,7 @@ export default function AuthForm({ mode, action }) {
           <input id="email" name="email" type="email" autoComplete="email" required placeholder="you@example.com" />
           <label htmlFor="password">Password</label>
           <input id="password" name="password" type="password" autoComplete={isLogin ? "current-password" : "new-password"} required minLength="12" placeholder="At least 12 characters" />
-          <p className="password-note">Use at least 12 characters, including a letter and a number.</p>
+          <p className="password-note">Use at least 6 characters, including a letter and a number.</p>
           {state?.error && <p className="form-error" role="alert">{state.error}</p>}
           <button className="primary-button" disabled={pending} type="submit">
             {pending ? "Please wait…" : isLogin ? "Log in" : "Create account"}

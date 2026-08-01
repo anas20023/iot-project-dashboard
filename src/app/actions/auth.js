@@ -11,7 +11,7 @@ function credentialsFrom(formData) {
   const password = String(formData.get("password") || "");
 
   if (!/^\S+@\S+\.\S+$/.test(email)) return { error: "Enter a valid email address." };
-  if (password.length < 12) return { error: "Use a password with at least 12 characters." };
+  if (password.length < 6) return { error: "Use a password with at least 12 characters." };
   if (!/[a-zA-Z]/.test(password) || !/\d/.test(password)) {
     return { error: "Your password must include at least one letter and one number." };
   }
